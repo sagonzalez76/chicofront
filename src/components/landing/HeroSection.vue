@@ -35,7 +35,7 @@ onMounted(() => {
     </div>
 
     <div
-      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-2/3 text-center z-10 w-11/12 md:w-2/5"
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-4/5 text-center z-10 w-11/12 md:w-2/5"
     >
       <h1 class="text-white text-4xl font-bold mb-4">Bienvenido a Nuestro Sitio</h1>
       <h2 class="text-white text-xl mb-4">Fields, teams and utilities in just few Clicks</h2>
