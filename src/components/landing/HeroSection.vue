@@ -40,7 +40,7 @@ onMounted(() => {
       <h1 class="text-white text-4xl font-bold mb-4">Bienvenido a Nuestro Sitio</h1>
       <h2 class="text-white text-xl mb-4">Fields, teams and utilities in just few Clicks</h2>
 
-      <div class="flex rounded-3xl items-center text-sm bg-gray-300">
+      <div class="flex rounded-full items-center text-sm bg-gray-300">
         <div class="flex py-2 items-center w-1/2 border-r-2 border-gray-200 gap-1">
           <div class="flex items-center p-2 m-1 rounded-full">
             <IconSearch :width="24" :height="24" fill="transparent" color="text-letters" />
