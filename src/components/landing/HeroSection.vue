@@ -18,12 +18,6 @@ const buttons = [
   { label: 'Mvp', onClick: () => console.log('Mvp clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
 ]
 
-const buttons = [
-  { label: 'Fields', onClick: () => console.log('Fields clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
-  { label: 'Teams', onClick: () => console.log('Teams clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
-  { label: 'Mvp', onClick: () => console.log('Mvp clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
-]
-
 const nextSlide = () => {
   currentIndex.value = (currentIndex.value + 1) % images.length
 }
