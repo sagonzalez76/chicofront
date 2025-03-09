@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import IconSearch from '../icons/IconSearch.vue'
-import LineButtons from '../buttons/LineButtons.vue'
+import IconSearch from '@/components/shared/icons/IconSearch.vue'
+import LineButtons from '@/components/shared/LineButtons.vue'
 
 const currentIndex = ref(0)
 const currentOption = ref(0)
@@ -70,7 +70,11 @@ onMounted(() => {
         <h2 class="text-white text-xl mb-4">Fields, teams and utilities in just few Clicks</h2>
       </div>
       <div class="flex justify-center gap-3 m-5">
-        <LineButtons :buttons="buttons" />
+        <LineButtons
+          :buttons="buttons"
+          :classContainer="'flex font-bold py-1 px-4 rounded-full gap-3'"
+          :classButton="'flex font-bold py-1 px-4 rounded-full bg-primary text-white hover:bg-white hover:text-primary'"
+        />
       </div>
       <div class="flex rounded-full items-center text-sm bg-gray-300">
         <div class="flex py-2 items-center w-1/2 border-r-2 border-gray-200 gap-1">

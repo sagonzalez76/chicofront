@@ -1,6 +1,6 @@
 <template>
-  <component 
-    :is="iconComponent" 
+  <component
+    :is="iconComponent"
     v-if="iconComponent"
     :class="[`w-${size} h-${size}`, color, bg, rounded, margin, padding]"
     v-bind="$attrs"
@@ -11,7 +11,10 @@
 import { defineProps, shallowRef, watchEffect } from 'vue'
 
 // Cargar dinámicamente todos los íconos desde la carpeta
-const icons = import.meta.glob('@/components/icons/*.vue') as Record<string, () => Promise<{ default: unknown }>>
+const icons = import.meta.glob('@/components/shared/icons/*.vue') as Record<
+  string,
+  () => Promise<{ default: unknown }>
+>
 
 // Definir las props del icono
 const props = defineProps<{
@@ -27,7 +30,7 @@ const props = defineProps<{
 const iconComponent = shallowRef<unknown>(null)
 
 watchEffect(async () => {
-  const iconPath = `/src/components/icons/${props.name}.vue`
+  const iconPath = `/src/components/shared/icons/${props.name}.vue`
   if (props.name && icons[iconPath]) {
     iconComponent.value = (await icons[iconPath]()).default
   } else {
