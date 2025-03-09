@@ -13,9 +13,30 @@ const images = [
 ]
 
 const buttons = [
-  { label: 'Fields', onClick: () => console.log('Fields clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
-  { label: 'Teams', onClick: () => console.log('Teams clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
-  { label: 'Mvp', onClick: () => console.log('Mvp clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
+  {
+    label: 'Fields',
+    onClick: () => console.log('Fields clicked'),
+    bgColor: 'bg-white',
+    textColor: 'text-primary',
+    hoverBgColor: 'hover:bg-primary',
+    hoverTextColor: 'hover:text-white',
+  },
+  {
+    label: 'Teams',
+    onClick: () => console.log('Teams clicked'),
+    bgColor: 'bg-white',
+    textColor: 'text-primary',
+    hoverBgColor: 'hover:bg-primary',
+    hoverTextColor: 'hover:text-white',
+  },
+  {
+    label: 'Mvp',
+    onClick: () => console.log('Mvp clicked'),
+    bgColor: 'bg-white',
+    textColor: 'text-primary',
+    hoverBgColor: 'hover:bg-primary',
+    hoverTextColor: 'hover:text-white',
+  },
 ]
 
 const nextSlide = () => {
@@ -48,9 +69,9 @@ onMounted(() => {
         <h1 class="text-white text-4xl font-bold mb-4">Bienvenido a Nuestro Sitio</h1>
         <h2 class="text-white text-xl mb-4">Fields, teams and utilities in just few Clicks</h2>
       </div>
-
-      <LineButtons :buttons="buttons" />
-
+      <div class="flex justify-center gap-3 m-5">
+        <LineButtons :buttons="buttons" />
+      </div>
       <div class="flex rounded-full items-center text-sm bg-gray-300">
         <div class="flex py-2 items-center w-1/2 border-r-2 border-gray-200 gap-1">
           <div class="flex items-center p-2 m-1 rounded-full">
@@ -75,7 +96,7 @@ onMounted(() => {
             <option value="3">Vóley</option>
           </select>
           <div class="flex items-center p-2 rounded-full bg-primary text-white">
-            <IconSearch :width="24" :height="24" fill="transparent" class="hover:text-white"/>
+            <IconSearch :width="24" :height="24" fill="transparent" class="hover:text-white" />
           </div>
         </div>
       </div>
