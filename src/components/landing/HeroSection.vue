@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import IconSearch from '../icons/IconSearch.vue'
+import LineButtons from '../buttons/LineButtons.vue'
 
 const currentIndex = ref(0)
 const currentOption = ref(0)
@@ -9,6 +10,12 @@ const images = [
   'public/images/Stadium2.jpg',
   'public/images/Stadium3.jpg',
   'public/images/Stadium4.jpg',
+]
+
+const buttons = [
+  { label: 'Fields', onClick: () => console.log('Fields clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
+  { label: 'Teams', onClick: () => console.log('Teams clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
+  { label: 'Mvp', onClick: () => console.log('Mvp clicked'), bgColor: 'bg-white', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary', hoverTextColor: 'hover:text-white' },
 ]
 
 const nextSlide = () => {
@@ -37,8 +44,12 @@ onMounted(() => {
     <div
       class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-4/5 text-center z-10 w-11/12 md:w-2/5"
     >
-      <h1 class="text-white text-4xl font-bold mb-4">Bienvenido a Nuestro Sitio</h1>
-      <h2 class="text-white text-xl mb-4">Fields, teams and utilities in just few Clicks</h2>
+      <div class="mb-10">
+        <h1 class="text-white text-4xl font-bold mb-4">Bienvenido a Nuestro Sitio</h1>
+        <h2 class="text-white text-xl mb-4">Fields, teams and utilities in just few Clicks</h2>
+      </div>
+
+      <LineButtons :buttons="buttons" />
 
       <div class="flex rounded-full items-center text-sm bg-gray-300">
         <div class="flex py-2 items-center w-1/2 border-r-2 border-gray-200 gap-1">
@@ -64,7 +75,7 @@ onMounted(() => {
             <option value="3">Vóley</option>
           </select>
           <div class="flex items-center p-2 rounded-full bg-primary text-white">
-            <IconSearch :width="24" :height="24" fill="transparent" />
+            <IconSearch :width="24" :height="24" fill="transparent" class="hover:text-white"/>
           </div>
         </div>
       </div>
