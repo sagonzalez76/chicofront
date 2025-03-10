@@ -2,6 +2,7 @@
 import BrowseCategories from '@/components/landing/BrowseCategories.vue';
 import NavBar from '../components/landing/NavBar.vue'
 import HeroSection from '@/components/landing/HeroSection.vue';
+import FeaturesSection from '@/components/landing/FeaturesSection.vue'
 </script>
 
 <template>
@@ -13,6 +14,9 @@ import HeroSection from '@/components/landing/HeroSection.vue';
       <HeroSection />
       <div class="container mx-auto">
         <BrowseCategories/>
+      </div>
+      <div>
+        <FeaturesSection />
       </div>
     </main>
   </div>

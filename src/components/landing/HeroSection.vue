@@ -49,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full overflow-hidden relative">
+  <div class="w-full overflow-hidden relative ">
     <div class="flex items-center justify-center relative">
       <div
         class="flex transition-transform duration-1000 ease-in-out"
@@ -63,7 +63,7 @@ onMounted(() => {
     </div>
 
     <div
-      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-4/5 text-center z-10 w-11/12 md:w-2/5"
+      class="absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-4/5 text-center z-10 w-11/12 md:w-2/5"
     >
       <div class="mb-10">
         <h1 class="text-white text-4xl font-bold mb-4">Bienvenido a Nuestro Sitio</h1>

@@ -51,9 +51,9 @@ const buttons: Button[] = [
   },
   {
     classButtonCustom: '',
-    iconClassCustom: 'w-8 h-8 bg-red-100 mr-4 rounded-full text-primary p-1',
+    iconClassCustom: 'w-8 h-8 bg-orange-100 mr-4 rounded-full text-orange p-1',
     label: 'More',
-    icon: 'IconBars',
+    icon: 'IconEllipsis',
     onClick: () => {
       console.log('Teams')
     },
@@ -68,8 +68,8 @@ const buttons: Button[] = [
     <div class="categories-container flex justify-center gap-24 m-10">
       <LineButtons
         :buttons="buttons"
-        :classContainer="'flex content-center font-bold py-1 px-4 rounded-full text-white hover:text-white gap-24'"
-        :classButton="'flex items-center font-bold py-2 px-4 rounded-full border-2 border-radius bg-transparent text-black'"
+        :classContainer="'grid gap-4 content-center font-bold py-1 px-2 rounded-full text-white hover:text-white grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:py-0'"
+        :classButton="'flex items-center font-bold py-1 px-4 rounded-full border-2 border-radius bg-transparent text-black'"
         :classLabel="''"
       />
     </div>
