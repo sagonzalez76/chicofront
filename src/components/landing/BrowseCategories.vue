@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 import LineButtons from '@/components/shared/LineButtons.vue'
+import LineBar from '@/components/shared/LineBar.vue'
+
 
 interface Button {
   label: string
   classButtonCustom: string
+  iconClassCustom: string
   classLabel?: string
   icon?: string
   onClick: () => void
@@ -11,27 +14,46 @@ interface Button {
 
 const buttons: Button[] = [
   {
-    classButtonCustom: 'bg-yellow-500',
-    classLabel: 'text-red-500',
-    label: 'Fields',
-    icon: 'IconHome',
+    classButtonCustom: '',
+    iconClassCustom: 'w-8 h-8 bg-red-100 mr-4 rounded-full text-primary p-1',
+    label: 'Holiday Rentals',
+    icon: 'IconLike',
     onClick: () => {
       console.log('Fields')
     },
   },
   {
-    classButtonCustom: 'bg-blue-500',
-    label: 'Mvp',
+    classButtonCustom: '',
+    iconClassCustom: 'w-8 h-8 bg-green-100 mr-4 rounded-full text-green-600 p-1',
+    label: 'Residential Spaces',
     icon: 'IconHome',
     onClick: () => {
       console.log('Mvp')
     },
   },
   {
-    classButtonCustom: 'bg-red-500',
-
-    label: 'Teams',
-    icon: 'IconHome',
+    classButtonCustom: '',
+    iconClassCustom: 'w-8 h-8 bg-purple-100 mr-4 rounded-full text-purple-600 p-1',
+    label: 'Event Spaces',
+    icon: 'IconTooling',
+    onClick: () => {
+      console.log('Teams')
+    },
+  },
+  {
+    classButtonCustom: '',
+    iconClassCustom: 'w-8 h-8 bg-blue-100 mr-4 rounded-full text-sky-600 p-1',
+    label: 'Commercial Properities',
+    icon: 'IconDollar',
+    onClick: () => {
+      console.log('Teams')
+    },
+  },
+  {
+    classButtonCustom: '',
+    iconClassCustom: 'w-8 h-8 bg-red-100 mr-4 rounded-full text-primary p-1',
+    label: 'More',
+    icon: 'IconBars',
     onClick: () => {
       console.log('Teams')
     },
@@ -42,11 +64,13 @@ const buttons: Button[] = [
 <template>
   <section class="browse-categories">
     <h2 class="text-center font-bold text-4xl mt-24">Browse From Top Categories</h2>
+    <LineBar></LineBar>
     <div class="categories-container flex justify-center gap-24 m-10">
       <LineButtons
         :buttons="buttons"
-        :classContainer="'flex font-bold py-1 px-4 rounded-full bg-black text-white  hover:text-white'"
-        :classButton="'flex font-bold py-1 px-4 rounded-full bg-blue-500 text-white hover:bg-primary-dark hover:text-white'"
+        :classContainer="'flex content-center font-bold py-1 px-4 rounded-full text-white hover:text-white gap-24'"
+        :classButton="'flex items-center font-bold py-2 px-4 rounded-full border-2 border-radius bg-transparent text-black'"
+        :classLabel="''"
       />
     </div>
   </section>

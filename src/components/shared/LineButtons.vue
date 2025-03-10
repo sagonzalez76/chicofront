@@ -9,6 +9,7 @@ defineProps({
       classButtonCustom?: string
       classLabel?: string
       icon?: string
+      iconClassCustom?: string | object
     }[],
     default: () => [],
   },
@@ -39,10 +40,8 @@ defineProps({
       <BaseIcon
         v-if="button.icon"
         :name="button.icon"
-        :width="24"
-        :height="24"
+        :class="button.iconClassCustom"
         fill="transparent"
-        color="text-letters"
       />
       <span :class="button.classLabel"> {{ button.label }}</span>
     </BaseButton>
